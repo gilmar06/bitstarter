@@ -51,6 +51,7 @@ var loadURL = function(urladdress, checksfile){
     restler.get(urladdress).on('complete', function(data){
 	checkJson = checkHtmlFile(data.toString(), checksfile);
     })
+    return checkJson;
 };
 
 var checkHtmlFile = function(htmlfile, checksfile) {
@@ -77,7 +78,7 @@ if(require.main == module) {
 	.option('-u, --url <url_address>', 'URL address')
         .parse(process.argv);
     if(program.file){
-	var checkJson = checkHtmlFile(program.file, program.checks);
+	checkJson = checkHtmlFile(program.file, program.checks);
     }
     if(program.url){
 	loadURL(program.url, program.checks);
@@ -87,3 +88,5 @@ if(require.main == module) {
 } else {
     exports.checkHtmlFile = checkHtmlFile;
 }
+
+
