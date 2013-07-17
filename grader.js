@@ -48,8 +48,10 @@ var loadChecks = function(checksfile) {
 
 // Download URL content and call verification function
 var loadURL = function(urladdress, checksfile){
-    restler.get(urladdress).on('complete', function(data){
-	checkJson = checkHtmlFile(data.toString(), checksfile);
+//    restler.get(urladdress).on('complete', function(data){
+//	checkJson = checkHtmlFile(data.toString(), checksfile);
+    var data = restler.get(urladdress);
+	console.log(data);
     })
     return checkJson;
 };
