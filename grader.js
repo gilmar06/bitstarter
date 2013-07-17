@@ -51,8 +51,8 @@ var loadURL = function(urladdress, checksfile){
 //    restler.get(urladdress).on('complete', function(data){
 //	checkJson = checkHtmlFile(data.toString(), checksfile);
     var data = restler.get(urladdress);
-	console.log(data);
-    })
+    console.log(data);
+//    })
     return checkJson;
 };
 
