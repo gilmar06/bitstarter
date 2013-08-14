@@ -104,6 +104,20 @@
  		   margin: 0 auto;
 		  }
 		</style>
+
+    <!-- Classic Analytics - ga.js -->
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-XXXXX-X']);
+      _gaq.push(['_trackPageview']);
+      
+      (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+
 	</head>
 	<body>
 		
@@ -193,9 +207,10 @@
 	      <div class="span8 offset2 social">
 		<!-- Social buttons are not included in default Bootstrap. -->
 		<!-- See: http://noizwaves.github.io/bootstrap-social-buttons -->
+		<!--
 		<button class="btn btn-twitter"><i class="icon-twitter"></i> | Twitter</button>
 		<button class="btn btn-facebook"><i class="icon-facebook"></i> | Facebook</button>
-		
+		-->
 		<!-- Buttons from AddThis.com -->
 		<div class="addthis_toolbox addthis_default_style addthis_32x32_style">
 		  <a class="addthis_button_preferred_1"></a>
